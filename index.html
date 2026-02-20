@@ -29,7 +29,7 @@
       </div>
     </div>
     <style>
-      /* ====== 原有电脑端样式 ====== */
+      /* ====== 电脑端样式（保持不变） ====== */
       body {
        background:linear-gradient(to right,rgb(241, 148, 241),rgb(128, 128, 179),rgb(247, 116, 116),rgb(234, 234, 42));   
       }
@@ -95,11 +95,12 @@
          margin-top: 100px;
       }
 
-      /* ====== 新增：手机端适配样式 ====== */
+      /* ====== 手机端适配样式（已修正） ====== */
       @media (max-width: 768px) {
           body {
               padding: 10px;
-              background: linear-gradient(to bottom, rgb(241, 148, 241), rgb(128, 128, 179), rgb(247, 116, 116), rgb(234, 234, 42));
+              /* 保持与电脑端相同的渐变方向 */
+              background: linear-gradient(to right, rgb(241, 148, 241), rgb(128, 128, 179), rgb(247, 116, 116), rgb(234, 234, 42));
           }
           .搜索页面 {
               width: 100%;
@@ -113,24 +114,25 @@
               padding: 0 10px;
           }
           .搜索框结构 {
-              flex-direction: column;
+              /* 保持水平排列，只调整子项居中 */
               align-items: center;
+              justify-content: center;
           }
           .输入框 {
-              width: 95%;
+              width: 65%; /* 减少宽度，给按钮留空间 */
               margin-top: 40px;
-              margin-left: 0;
-              border-radius: 20px;
+              margin-left: 2%; /* 保持与电脑端一致的左边距 */
+              border-radius: 20px 0 0 20px; /* 保持左侧圆角 */
               font-size: 16px;
-              height: 50px;
+              height: 45px; /* 增加高度便于触摸 */
           }
           .点击搜索按钮 {
-              width: 95%;
-              margin-top: 15px;
-              border-radius: 20px;
-              height: 50px;
-              line-height: 50px;
-              font-size: 18px;
+              width: 30%; /* 给按钮分配宽度 */
+              margin-top: 40px; /* 与输入框相同的上边距 */
+              border-radius: 0 20px 20px 0; /* 保持右侧圆角 */
+              height: 45px; /* 与输入框相同高度 */
+              line-height: 45px; /* 垂直居中 */
+              font-size: 16px;
           }
           .热门话题列表 {
               width: 95%;
@@ -151,10 +153,16 @@
           .上标题 {
               font-size: 20px;
           }
-          .输入框, .点击搜索按钮 {
+          .输入框 {
+              width: 60%; /* 在小手机上进一步调整宽度比例 */
               font-size: 14px;
-              height: 45px;
-              line-height: 45px;
+              height: 40px;
+          }
+          .点击搜索按钮 {
+              width: 35%; /* 小手机上按钮稍微宽一些 */
+              font-size: 14px;
+              height: 40px;
+              line-height: 40px;
           }
           .名称, .删除 {
               font-size: 14px;
