@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实战1</title>
+</head>
+<body>
+    <div class="搜索页面">
+    <div class="上标题">搜索器页面</div>
+      <div class="搜索框结构">
+      <input class="输入框"type="text" placeholder="点击搜索感兴趣的内容吧！">
+      <div class="点击搜索按钮">点击搜索</div>
+      </div>
+      <div class="热门话题列表">
+        <input  type="checkbox" placeholder="美食">
+        <div class="名称">美食</div>
+        <div class="删除">del</div>
+      </div>
+      <div class="热门话题列表">
+        <input  type="checkbox" placeholder="游戏">
+        <div class="名称">游戏</div>
+        <div class="删除">del</div>
+      </div>
+      <div class="热门话题列表">
+        <input  type="checkbox" placeholder="电影">
+        <div class="名称">电影</div>
+        <div class="删除">del</div>
+      </div>
+    </div>
+    <style>
+      body {
+       background:linear-gradient(to right,rgb(241, 148, 241),rgb(128, 128, 179),rgb(247, 116, 116),rgb(234, 234, 42));   
+      }
+      .名称{
+        line-height: 45px;
+        font-size: 20px;
+      }
+      .删除{
+        line-height: 45px;
+        font-size: 20px;
+        margin-left: 80%;
+      }
+      .热门话题列表{
+        box-shadow: rgb(148, 138, 3) 5px 0  3px;
+        background-color: rgb(240, 244, 118);
+        height: 45px;
+        width: 70%;
+        margin-top:30px;
+        margin-left: 15%;
+        border-radius: 20px;
+        display: flex;
+      }
+
+      .点击搜索按钮{
+        text-align: center;
+        background:linear-gradient(to right,rgb(213, 84, 217) ,rgb(18, 217, 217));
+        color: #ece5e5;
+        line-height: 35px;
+        width: 15%;
+        margin-top: 100px;
+        border-radius: 0 20px 20px 0;
+        font-size :20px;
+        cursor: pointer;
+        user-select: none;
+      }
+      .搜索页面{
+        background-color: aliceblue;
+        height: 500px;
+        width:98%;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-left: 1%;
+        padding-top: 25px;
+        box-sizing:border-box;
+      }
+      .上标题{
+        font-size:30px;
+        font-weight:700;
+        text-align:center;
+      }
+      .搜索框结构{
+        display: flex;
+      }
+      .输入框{
+        text-align:center;
+        font-size: 20px;
+         border:1.5px solid #05fc05;
+         outline:none;
+         height: 35px;
+         width:80%;
+         margin-left: 2%;
+         border-radius: 20px 0 0 20px;
+         margin-top: 100px;
+      }
+    </style>
+</body>
+</html>
